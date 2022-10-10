@@ -5,12 +5,12 @@ local Padding = require(plugin.Components.UIUtils.Padding)
 local New = Fusion.New
 local Children = Fusion.Children
 local Hydrate = Fusion.Hydrate
-local OnEvent = Fusion.OnEvent
 
 type TextIconProps = {
     Text : string,
     Font : Enum.Font?,
     RichText : boolean?,
+    onHover : (() -> ())?,
     [any]: any
 }
 
