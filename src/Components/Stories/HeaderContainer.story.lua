@@ -11,9 +11,9 @@ local TextScaled = require(plugin.Components.UIUtils.TextScaled)
 
 local sizes = {40, 33, 28}
 
+-- TODO: add a separate Header component, this is for testing right now.
 local function Header()
     return Label {
-        -- just for testing's sake 😳
         TextSize = sizes[math.random(1, 3)],
         Text = "Header",
         [TextScaled] = Value(true)
