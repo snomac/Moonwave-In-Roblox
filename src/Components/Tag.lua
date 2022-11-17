@@ -6,7 +6,7 @@ local components = plugin.Components
 local Fusion = require(plugin.Packages.Fusion)
 
 local Label = require(components.Label)
-local TextScaled = require(components.UIUtils.TextScaled)
+local TextHugged = require(components.UIUtils.TextHugged)
 
 local New = Fusion.New
 local Value = Fusion.Value
@@ -64,9 +64,10 @@ local function Tag(props : TagProps)
             TextColor3 = Color3.new(255, 255, 255),
             AnchorPoint = Vector2.new(0, 0),
             Position = Computed(function()
-                return UDim2.new(0, 0, 0, 0)
+                -- temporary fix to TextHugged breaking
+                return UDim2.new(0, 50, 0, 6)
             end),
-            [TextScaled] = Value(true)
+            [TextHugged] = Value("Y")
         },
         [Ref] = tagRef
     })(hydrateProps)

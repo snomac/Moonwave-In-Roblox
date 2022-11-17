@@ -1,7 +1,7 @@
 local plugin = script:FindFirstAncestor("Plugin")
 
 local Label = require(plugin.Components.Label)
-local TextScaled = require(plugin.Components.UIUtils.TextScaled)
+local TextHugged = require(plugin.Components.UIUtils.TextHugged)
 
 local Fusion = require(plugin.Packages.Fusion)
 local Computed = Fusion.Computed
@@ -18,9 +18,8 @@ return function(target)
             return newSize
         end),
         TextWrapped = true,
-        [TextScaled] = Value(true),
+        [TextHugged] = Value("XY"),
     }
-
     return function()
         label:Destroy()
     end

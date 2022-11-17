@@ -7,7 +7,7 @@ local Value = Fusion.Value
 local HeaderContainer = require(plugin.Components.HeaderContainer)
 local Label = require(plugin.Components.Label)
 
-local TextScaled = require(plugin.Components.UIUtils.TextScaled)
+local TextHugged = require(plugin.Components.UIUtils.TextHugged)
 
 local sizes = {40, 33, 28}
 
@@ -16,7 +16,7 @@ local function Header()
     return Label {
         TextSize = sizes[math.random(1, 3)],
         Text = "Header",
-        [TextScaled] = Value(true)
+        [TextHugged] = Value("XY")
     }
 end
 
