@@ -1,6 +1,6 @@
 local TextService = game:GetService("TextService")
 
-local plugin = script:FindFirstAncestor("Plugin")
+local plugin = script.Parent.Parent
 local components = plugin.Components
 
 local globalStates = require(plugin.Utils.globalStates)
@@ -42,7 +42,7 @@ local function Search(props : SearchProps)
             end
             return UDim2.new(1, 0, 0, 250)
         end),
-        TweenInfo.new(0.5)
+        TweenInfo.new(0.35, Enum.EasingStyle.Cubic)
     )
 
     return Hydrate(New "Frame" {

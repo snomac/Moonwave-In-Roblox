@@ -1,5 +1,5 @@
 local TextService = game:GetService("TextService")
-local plugin = script:FindFirstAncestor("Plugin")
+local plugin = script.Parent.Parent.Parent
 
 local Fusion = require(plugin.Packages.Fusion)
 local Children = Fusion.Children

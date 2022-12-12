@@ -1,4 +1,4 @@
-local plugin = script:FindFirstAncestor("Plugin")
+local plugin = script.Parent.Parent.Parent
 
 local Label = require(plugin.Components.Label)
 local TextHugged = require(plugin.Components.UIUtils.TextHugged)

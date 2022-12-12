@@ -1,4 +1,4 @@
-local plugin = script:FindFirstAncestor("Plugin")
+local plugin = script.Parent.Parent.Parent
 
 local Search = require(plugin.Components.Search)
 local globalStates = require(plugin.Utils.globalStates)

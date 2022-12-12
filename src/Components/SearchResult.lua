@@ -1,4 +1,4 @@
-local plugin = script:FindFirstAncestor("Plugin")
+local plugin = script.Parent.Parent
 local Fusion = require(plugin.Packages.Fusion)
 local components = plugin.Components
 

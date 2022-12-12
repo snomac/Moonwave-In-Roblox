@@ -1,5 +1,5 @@
 local TextService = game:GetService("TextService")
-local plugin = script:FindFirstAncestor("Plugin")
+local plugin = script.Parent.Parent
 local uiUtils = plugin.Components.UIUtils
 local getValidUiAnchor = require(uiUtils.getValidUiAnchor)
 local scaleToOffset = require(uiUtils.scaleToOffset)

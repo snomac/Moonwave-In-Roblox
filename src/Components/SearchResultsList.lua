@@ -1,4 +1,4 @@
-local plugin = script:FindFirstAncestor("Plugin")
+local plugin = script.Parent.Parent
 local Fusion = require(plugin.Packages.Fusion)
 local components = plugin.Components
 local utils = plugin.Utils
@@ -108,8 +108,6 @@ local function SearchResultsList(props : SearchResultsListProps)
                                 end
                             end
                         end
-
-                        print(matches)
 
                         return {
                             unpack(matches.title),
