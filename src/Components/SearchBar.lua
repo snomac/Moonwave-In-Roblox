@@ -15,14 +15,14 @@ local Hydrate = Fusion.Hydrate
 local Tween = Fusion.Tween
 
 type SearchBarProps = {
-    onHelpButtonActivated : (() -> nil)?,
-    onSearchTextChanged : ((string) -> nil)?,
+    OnHelpButtonActivated : (() -> nil)?,
+    OnSearchTextChanged : ((string) -> nil)?,
     [any]: any
 }
 
 local COMPONENT_ONLY_PROPERTIES = {
-    "onHelpButtonActivated",
-    "onSearchTextChanged"
+    "OnHelpButtonActivated",
+    "OnSearchTextChanged"
 }
 
 local function SearchBar(props : SearchBarProps)
@@ -46,9 +46,9 @@ local function SearchBar(props : SearchBarProps)
             },
             SearchBox {
                 LayoutOrder = 1,
-                Size = UDim2.new(0.9, 0, 0, 25),
-                AutomaticSize = Enum.AutomaticSize.X,
-                [OnChange "Text"] = props.onSearchTextChanged
+                Size = UDim2.new(1, -35, 0, 25),
+                AutomaticSize = Enum.AutomaticSize.Y,
+                [OnChange "Text"] = props.OnSearchTextChanged
             },
             TextIcon {
                 Text = "<i>i</i>",
@@ -58,8 +58,8 @@ local function SearchBar(props : SearchBarProps)
                 BackgroundColor3 = Tween(iconColor, TweenInfo.new(0.25)),
                 TextColor3 = Color3.fromRGB(255, 255, 255),
                 [OnEvent "Activated"] = function()
-                    if props.onHelpButtonActivated then
-                        props.onHelpButtonActivated()
+                    if props.OnHelpButtonActivated then
+                        props.OnHelpButtonActivated()
                     end
                 end,
                 [OnEvent "MouseEnter"] = function()

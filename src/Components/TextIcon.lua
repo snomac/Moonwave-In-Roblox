@@ -7,10 +7,6 @@ local Children = Fusion.Children
 local Hydrate = Fusion.Hydrate
 
 type TextIconProps = {
-    Text : string,
-    Font : Enum.Font?,
-    RichText : boolean?,
-    onHover : (() -> ())?,
     [any]: any
 }
 

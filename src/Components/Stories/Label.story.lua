@@ -11,7 +11,7 @@ return function(target)
     local label = Label {
         Parent = target,
         Size = UDim2.new(0, 50, 0, 25),
-        Position = UDim2.fromScale(0.15, 0.15),
+        Position = UDim2.new(0.5, 0.5),
         Text = "Hello, world!",
         TextSize = Computed(function()
             local newSize = math.random(30, 50)

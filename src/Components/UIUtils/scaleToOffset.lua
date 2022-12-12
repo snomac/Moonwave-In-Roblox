@@ -23,9 +23,6 @@ local function fromRelativeAbsoluteSize(mainInstanceSize, relativeAbsoluteSize)
     local guiWidth = mainInstanceSize.Width
     local guiHeight = mainInstanceSize.Height
 
-    -- print(guiHeight, relativeAbsoluteSize.Y, guiHeight.Scale * relativeAbsoluteSize.Y + guiHeight.Offset)
-    print(mainInstanceSize, relativeAbsoluteSize)
-
     return UDim2.fromOffset(
         guiWidth.Scale * relativeAbsoluteSize.X + guiWidth.Offset,
         guiHeight.Scale * relativeAbsoluteSize.Y + guiHeight.Offset
