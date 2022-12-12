@@ -13,14 +13,13 @@ type LabelProps = {
 }
 
 local function Label(props : LabelProps)
-    local headerLabelRef = Value()
 
     return Hydrate(New "TextLabel" {
         Size = UDim2.new(0, 15, 0, 50),
-        AnchorPoint = Vector2.new(0.5, 0.5),
+        AnchorPoint = Vector2.new(0, 0),
         BackgroundTransparency = 1,
-        Font = props.Font or Enum.Font.SourceSansBold,
-        [Ref] = headerLabelRef
+        Font = Enum.Font.SourceSansBold,
+        TextColor3 = Color3.fromRGB(255, 255, 255)
     })(props)
 end
 

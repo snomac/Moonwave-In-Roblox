@@ -23,7 +23,6 @@ end
 return function(target)
     local header = HeaderContainer {
         Parent = target,
-        Position = UDim2.fromScale(0.15, 0.15),
         [Children] = {
             Header {},
             Header {},

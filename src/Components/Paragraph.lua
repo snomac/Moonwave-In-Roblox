@@ -58,7 +58,6 @@ local function Paragraph(props : ParagraphProps)
     local disconnect = anchorObserver:onChange(function()
         if anchor:get() ~= nil then
             anchor:get():GetPropertyChangedSignal("AbsoluteSize"):Connect(function()
-                -- print("changed", anchor:get().AbsoluteSize)
                 anchorSize:set(anchor:get().AbsoluteSize)
             end)
         end
