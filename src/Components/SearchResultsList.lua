@@ -6,7 +6,7 @@ local utils = plugin.Utils
 local Padding = require(components.UIUtils.Padding)
 local TextHugged = require(components.UIUtils.TextHugged)
 local Label = require(components.Label)
-local StringUtil = require(utils.StringUtil)
+local stringUtil = require(utils.stringUtil)
 
 local New = Fusion.New
 local Value = Fusion.Value
