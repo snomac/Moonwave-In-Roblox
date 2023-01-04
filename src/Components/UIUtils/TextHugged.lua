@@ -7,7 +7,7 @@ TextHugged.stage = "self"
 
 local function recalculateTextSize(value, instance)
     if value.kind ~= "Value" then
-        warn("[TextHugged] kind is not a Value type.")
+        warn("[TextHugged] Kind is not a Value type.")
         return
     end
 
@@ -23,9 +23,11 @@ local function recalculateTextSize(value, instance)
         )
     )
 
-    instance.Size = UDim2.fromOffset(
-        if string.find(value:get(), "X") then newSize.X else instance.Size.Width.Offset,
-        if string.find(value:get(), "Y") then newSize.Y else instance.Size.Height.Offset
+    instance.Size = UDim2.new(
+        instance.Size.X.Scale,
+        if string.find(value:get(), "X") then newSize.X else instance.AbsoluteSize.X,
+        instance.Size.Y.Scale,
+        if string.find(value:get(), "Y") then newSize.Y else instance.AbsoluteSize.Y
     )
 end
 
